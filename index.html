@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>JGEC Winter Of Code</title>  
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.theme.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.min.css'>
+<link rel="stylesheet" href="css/style.css">  
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img style="width: 20%; padding-top: 0px;" src="data:image/png;base64,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"</a>
+            </div>
+            <div>
+           
+            </div>
+           
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">About JWOC</a>
+                    </li>
+                    <li>
+                        <a href="#about">How it Works?</a>
+                    </li>
+
+                    <li>
+                        <a href="#project"> Project </a>
+                     
+                    </li>
+					                    <li>
+                        <a href="#cazz">:Leatherboard</a>
+                    </li>
+
+
+                    <li>
+                        <a href="#team">Team</a>
+                    </li>
+					                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+       
+    </nav>
+
+    <!-- Header Carousel -->
+
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!--  slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('https://home.bt.com/images/setting-up-second-hand-laptop-136424665367102601-180130101028.png');"></div>
+                <div class="carousel-caption">
+                    <h2>If you want this</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('https://dbpost.com/wp-content/uploads/2018/12/car.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Or ,if you want this</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('https://s.hdnux.com/photos/36/56/31/8054365/5/rawImage.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Even, if you want this</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+
+   
+    <div class="container">
+
+        <!-- Marketing Icons -->
+        <div class="row" id="about">
+		<br>
+           <section class="wow fadeInRight" data-wow-delay="0.5s">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    JWOC
+                </h1>
+            </div>
+          </section>
+          
+            <div class="col-md-6 col-sm-12">
+               <section class="wow fadeInDown" data-wow-delay="0.5s" >
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i> ABOUT JWOC</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Founded in 2006 by Fabrice Grinda and Alec Oxenford, the online marketplace OLX has its roots in Argentina. The company today functions in over 40 countries, of which it has emerged out as a stronghold in countries like India, Pakistan, Brazil, Portugal, Poland, Ukraine, Nigeria, Philippines, and Kenya. The online classifieds website was funded by several firms such as Nexus Venture Partners, General Catalyst Partners, and Bessemer Venture Partners, to name a few. This was until a major part of the company was taken over by Naspers, a South African media group, who succeeded in procuring the then investors. OLX had a standing of $30 million before being purchased by Naspers.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+              </section>
+            </div>
+          
+            <div class="col-md-6 col-sm-12">
+              <section class="wow fadeInDown" data-wow-delay="0.5s">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i> HOW IT WORKS?</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>A major part of OLX’s revenue comes from Google Ads Monetization. The company works with partners who in-turn works with Google and other ad partners to act as ad supplier and ad mediator for the website.
+
+These Ads works in juxtaposition with the OLX website, and its contents are displayed on the webpage itself. 
+
+OLX garners high user traffic through online and TV brand advertisements. OLX monetizes this high customer inflow. It does this on the basis of Cost per Click (CPC), Cost per 1000 Impressions (CPM) and Cost per View for video ads on its home page as well as that on individual product pages till the seller is finally contacted and transacted with.</p>
+                        <a href="#" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+              </section>
+            </div>
+          
+          
+            
+              
+           </section>
+        </div>
+  
+
+       
+        <div class="row" id="project">
+		<br>
+            <div class="col-lg-12">
+                <section class="wow fadeInRight" data-wow-delay="0.5s">
+                    <h2 class="page-header">SUBMIT YOUR PROJECTS</h2>
+                </section>
+				 <form action="/process.php">
+    <div class="form-group col-md-4">
+      <label for="text">NAME:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your Name" name="email" required>
+    </div>
+	    <div class="form-group col-md-4">
+      <label for="email">EMAIL:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+	   <div class="form-group col-md-4">
+	      <label for="yr">YEAR:</label><br><br>
+	<select id="yr" name="yr" class="col-md-6" style="height:20px" required>
+  <option value="1">1st</option>
+  <option value="2">2nd</option>
+</select></div>
+	<br>
+   <div class="form-group">
+      <label for="pwd">PROJECT TITEL:</label>
+      <input type="text" class="form-control" id="pwd" placeholder="Enter Massege/Enquery" name="pswd">
+    </div>
+   <div class="form-group">
+      <label for="pwd">PROJECT DESCRIPTION:</label>
+      <input type="textarea" class="form-control" id="pwd" placeholder="Enter Massege/Enquery" name="pswd">
+    </div>	
+
+      <label for="pwd">DETAIL FILE:</label>
+      <input type="file" class="form-control" id="pwd" placeholder="Enter Massege/Enquery" name="pswd">
+
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit Your Project</button>
+  </form>
+
+            </div>
+                    </div>
+        <!-- /.row -->
+
+        <!-- Features Section -->
+        <div class="row" id="cazz">
+		<br>
+		<br>
+		<br>
+            <div class="col-lg-12">
+                <section class="wow fadeInRight" data-wow-delay="0.5s">
+                    <h2 class="page-header">LEATRHERBOARD</h2>
+                </section>
+            </div>
+            <div class="col-md-6 col-sm-12">
+            <section class="wow fadeInDown" data-wow-delay="0.5s">
+                <p>Top Features of OLX.in to Standalone</p>
+                <ul>
+                    <li><strong>Morden Business</strong>
+                    </li>
+                    <li>Simplicity of Creating Advertisements. As we mentioned earlier, it takes not more than a few seconds to creative an interactive advertisement in OLX.in, as it requires a few clicks only. ...</li>
+                    <li>Intuitive User Interface</li>
+                    <li>Multiple Ways to Access</li>
+                    <li>Wider Audience</li>
+                    <li>Youtube Video</li>
+                </ul>
+                <p>Option to provide "Report" against the brokers who pose as end users/sellers in-spite of being listed under the category of "Individual". Should auto delete the ads, post a certain time frame. This will reduce the time taken to check all the ads.</p>
+             </section>   
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <section class="wow fadeInDown" data-wow-delay="0.5s">
+                    <video style="width: 100%;float: right;" src="additional file/vid1.mp4" controls autoplay>
+                        
+                    </video>
+                </section>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+		
+		<!-- OUR TEAM-->
+		<div class="well">
+		<div class="row" id="team">
+		<br>
+		<h1 class="text-center">Team</h1>
+	<h2>Organisers</h2>
+<div class="card-deck">
+  <div class="card">
+  <div class="col-md-4 col-sm-12">
+    <img class="card-img-top" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/51033649_426072051466574_2969565157530796032_n.jpg?_nc_cat=111&_nc_oc=AQkya1Ye4OqMLmxjnNpXhqFE3VQHUDUgihWlS4cq14hFYyJTVn7Aurs2MHz_vixA33e2k1rtW6hihYcZZXQRHzkk&_nc_ht=scontent.fccu11-1.fna&oh=b9d4cf0cd4bbb698e659bd9b9d753946&oe=5E20BBC5" alt="Card image cap" height="400em" width="340em">
+    <div class="card-body">
+      <h5 class="card-title">Papun Charan</h5>
+      <a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="40px" width="40px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="40px" width="40px"></a>
+    </div>
+	</div>
+  </div>
+  <div class="card">
+  <div class="col-md-4 col-sm-12">
+    <img class="card-img-top" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/71796954_2353328148329171_3457169680794386432_n.jpg?_nc_cat=105&_nc_oc=AQks7G9DKfYsfuhPAN8-li2wgVHtwXCs7GCDZkWyEmdL-A9jJrIqgdqn96Pjh6ws5270OnICE2FGyRFs_Vn5RUlg&_nc_ht=scontent.fccu11-1.fna&oh=80c41078e05862c2cb7565416f6dc34a&oe=5E55F833" alt="Card image cap" height="400em" width="340em">
+    <div class="card-body">
+      <h5 class="card-title">Sudipto Ghosh</h5>
+      <a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="40px" width="40px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="40px" width="40px"></a>
+    </div>
+	</div>
+  </div>
+  <div class="card">
+  <div class="col-md-4 col-sm-12">
+    <img class="card-img-top" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/65891555_1404715679666986_2426797225368616960_n.jpg?_nc_cat=107&_nc_oc=AQk_6eUMjEUnjTnkPO1CSVv3UYlYoVaKfM3NSKJUTQ3it9UpRmutIPN2lEqGcq3dplr1-6ZYejN-Y_-rkZeMPOf9&_nc_ht=scontent.fccu11-1.fna&oh=729cea805a9f4b06189feb892e33e36d&oe=5E1EE1D2" alt="Card image cap" height="400em" width="340em">
+    <div class="card-body">
+      <h5 class="card-title">Tanmoy Sarkar</h5>
+      <a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="40px" width="40px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="40px" width="40px"></a>
+    </div>
+  </div>
+</div>
+<h2>Designers & Developers</h2>
+<div class="card-deck">
+  <div class="card">
+  <div class="col-md-4 col-sm-12">
+    <img class="card-img-top" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/69631327_2370545396520771_6390831965452369920_n.jpg?_nc_cat=104&_nc_oc=AQlM-jwnVHiStWYcdJNlejA3EYSUTPGZxPJZfjPCX4BXMN0MWDAWGtVvB9ebYag_fLljCk2u10kHjymPJE_OfuXx&_nc_ht=scontent.fccu11-1.fna&oh=e788bbfd95a765fc0efda512bc651bca&oe=5E580EA9" alt="Card image cap" height="400em" width="340em">
+    <div class="card-body">
+      <h5 class="card-title">Dibyendu Maji</h5>
+      <a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="40px" width="40px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="40px" width="40px"></a>
+    </div>
+	</div>
+  </div>
+  <div class="card">
+  <div class="col-md-4 col-sm-12">
+    <img class="card-img-top" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/69576197_2413611762297797_4792687583937167360_n.jpg?_nc_cat=105&_nc_oc=AQnDjDEMwyK0ShhvdSvhDpwuDKrBQi5E1jIgQz1ADo0UokXLLLnzD-7exppi3FsX2wBHxE2K7LGSl-vve0x9t8XY&_nc_ht=scontent.fccu11-1.fna&oh=efd91e5196d960d8cbe208d934e57db9&oe=5E1FED36" alt="Card image cap" height="400em" width="340em">
+    <div class="card-body">
+      <h5 class="card-title">Sayan Ganguly</h5>
+   <div class="text-center">
+      <a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="40px" width="40px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="40px" width="40px"></a>
+  </div>
+    </div>
+  </div>
+  </div>
+  <div class="card"><div class="col-md-4 col-sm-12">
+    <img class="card-img-top" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/72482571_673225223184494_3122794695705493504_n.jpg?_nc_cat=106&_nc_oc=AQn9sp02iGv2xLEqwtjHjdJV8h_xZe3LEIsXUOfzKBu5GAX_XZcSnUv9wgYFebpOpOmkpa89LfYyyZX7p3HGJqmj&_nc_ht=scontent.fccu11-1.fna&oh=227a412b3e45f0a9b0be22eafcb49e77&oe=5E58C3C4" alt="Card image cap" height="400em" width="340em">
+    <div class="card-body">
+      <h5 class="card-title">Sanat Dey</h5>
+      <div class="text-center">
+      <a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="40px" width="40px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="40px" width="40px"></a>
+  </div>
+    </div></div>
+  </div>
+</div>
+		</div>
+		</div>
+        <div class="well">
+            <div class="row" id="contact">
+<h1 class="text-center">contact us</h1>
+
+		<!-- <h2>OUT TEAM</h2>
+		<br>
+		<div class="col-md-4 col-sm-12">
+		<img class="img-responsive img-portfolio img-hover" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/71796954_2353328148329171_3457169680794386432_n.jpg?_nc_cat=105&_nc_oc=AQks7G9DKfYsfuhPAN8-li2wgVHtwXCs7GCDZkWyEmdL-A9jJrIqgdqn96Pjh6ws5270OnICE2FGyRFs_Vn5RUlg&_nc_ht=scontent.fccu11-1.fna&oh=80c41078e05862c2cb7565416f6dc34a&oe=5E55F833" alt="watch">
+		<p>Sudipto Ghosh</p>
+		<p>Organiser</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		<img class="img-responsive img-portfolio img-hover" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/51033649_426072051466574_2969565157530796032_n.jpg?_nc_cat=111&_nc_oc=AQkya1Ye4OqMLmxjnNpXhqFE3VQHUDUgihWlS4cq14hFYyJTVn7Aurs2MHz_vixA33e2k1rtW6hihYcZZXQRHzkk&_nc_ht=scontent.fccu11-1.fna&oh=b9d4cf0cd4bbb698e659bd9b9d753946&oe=5E20BBC5" alt="watch">
+		<p>Papun Chran</p>
+		<p>Organiser</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		<img class="img-responsive img-portfolio img-hover" src="additional file/pic4.jpg" alt="watch">
+		<p>Tanmay</p>
+		<p>Organiser</p>
+		</div>
+		<br>
+		<div class="col-md-4 col-sm-12">
+		<img class="img-responsive img-portfolio img-hover" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/72482571_673225223184494_3122794695705493504_n.jpg?_nc_cat=106&_nc_oc=AQn9sp02iGv2xLEqwtjHjdJV8h_xZe3LEIsXUOfzKBu5GAX_XZcSnUv9wgYFebpOpOmkpa89LfYyyZX7p3HGJqmj&_nc_ht=scontent.fccu11-1.fna&oh=227a412b3e45f0a9b0be22eafcb49e77&oe=5E58C3C4" alt="watch">
+		<p>Sanat Dey</p>
+		<p>Design & Development</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		<img class="img-responsive img-portfolio img-hover" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/69631327_2370545396520771_6390831965452369920_n.jpg?_nc_cat=104&_nc_oc=AQlM-jwnVHiStWYcdJNlejA3EYSUTPGZxPJZfjPCX4BXMN0MWDAWGtVvB9ebYag_fLljCk2u10kHjymPJE_OfuXx&_nc_ht=scontent.fccu11-1.fna&oh=e788bbfd95a765fc0efda512bc651bca&oe=5E580EA9" alt="watch">
+		<p>Dybendu Majhi</p>
+		<p>Design & Development</p>
+		</div>
+		<div class="col-md-4 col-sm-12">
+		<img class="img-responsive img-portfolio img-hover" src="https://scontent.fccu11-1.fna.fbcdn.net/v/t1.0-9/69576197_2413611762297797_4792687583937167360_n.jpg?_nc_cat=105&_nc_oc=AQnDjDEMwyK0ShhvdSvhDpwuDKrBQi5E1jIgQz1ADo0UokXLLLnzD-7exppi3FsX2wBHxE2K7LGSl-vve0x9t8XY&_nc_ht=scontent.fccu11-1.fna&oh=efd91e5196d960d8cbe208d934e57db9&oe=5E1FED36" alt="watch">
+		<p>Sayan Ganguli</p>
+		<p>Design & Development</p>
+		</div> -->
+
+        <!-- Call to Action Section --><!-- 
+        <div class="well">
+            <div class="row" id="contact">
+			<br>
+			<br>
+			<br>
+<h2>CONTUCT US</h2> -->
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="text">NAME:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your Name" name="email">
+    </div>
+	    <div class="form-group">
+      <label for="email">EMAIL:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">MESSAGE:</label>
+      <input type="textarea" class="form-control" id="pwd" placeholder="Enter Massege/Enquery" name="pswd">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <div class="contact text-center">
+<a href="#" class="card-link"><img src="https://followmyvote.com/wp-content/uploads/2015/06/linkedin-logo.png" height="60px" width="60px"></a>
+      <a href="#" class="card-link"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="60px" width="60px"></a></div>
+                   
+                </div>
+            
+        </div></div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; JWOC 2019</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+  
+
+    
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes speed
+    })
+    </script>
+
+</body>
+
+</html>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.0/wow.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.2/owl.carousel.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
