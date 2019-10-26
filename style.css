@@ -1,0 +1,214 @@
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.img-portfolio {
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel {
+    height: 85%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+}
+
+header.carousel .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 50%;
+    }
+}
+
+
+.sectiona { 
+  background: url(http://coolblackppt.com/wp-content/uploads/2013/08/Abstract-dark-textures-floral-floral-texture-fresh-new-hd-wallpaper.jpg);
+  width: 100%;
+  background-attachment: fixed;
+}
+
+
+.sectionb { background: #d0d0d0;    width: 100%;}
+
+
+.facontainer {
+  width: auto;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+
+
+ .facontainer a {color: #000;
+  -webkit-transition: all 0.2s ease; /* Safari compatibility */
+	transition: all 0.2s ease; /* not recognised in IE9 and below */}
+.facontainer a:hover {color: #87d0b0;
+  	-webkit-transition: all 0.2s ease; /* Safari compatibility */
+	transition: all 0.2s ease; /* not recognised in IE9 and below */}
+
+.facontainer h2 {
+    color: #FFF;
+    text-align: center;
+    margin-bottom: 26px;
+    line-height: 60px;
+    font-size: 56px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    color: #000;
+   font-family: "Roboto",sans-serif;
+}
+
+.facontainer p {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    width: 80%;
+    margin: 20px auto;
+    line-height: 24px;
+   font: 14px/24px "Roboto",sans-serif;
+}
+
+.facontainer i {
+    background: #45906F;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+}
+
+.facontainer li {
+  color: #000;
+  display: inline-block;
+  font-size: 60px;
+}
+
+.facontainer li:hover { 
+  color: #006237;
+}
+
+
+#owl-demo {background:#fff;}
+
+    #owl-demo .item{
+    display: block;
+    padding: 54px 0px;
+    margin: 5px;
+    color: #000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    }
+    #owl-demo .left{
+    text-align: left;
+    margin-bottom: 10px;
+    }
+    #owl-demo .left .btn {
+    display: block;
+    }
+#owl-demo h2 {
+font: 600 24px/28px "Open Sans",sans-serif;
+color: #99BF38;
+}
+
+#owl-demo p {
+  font: italic 300 24px/28px "Open Sans",sans-serif;
+  color: #2B3A42;
+}
+#yupp{
+    text-decoration: none;
+    color: #003333;
+}
+.card-deck{
+	margin: 10px;
+}
+.card{
+	transition:all 2s;
+	border-color: pink;
+	border-width: 5px;
+	border-radius: 10px;
+	
+}
+.card:hover{
+	transform: scale(1.1); 
+}
+
+
+.card-title{
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	font-size: 2em;
+}
+img{
+	opacity: 1.0;
+}
+.card-body{
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaRxu_mLVZ5BRvdj3nrPDpgOrToRmvYJ8criy3sheq3Qte7yjS&s");
+}
