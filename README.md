@@ -7,4 +7,4 @@ And for Processing Data We Need 2/3 PHP file and a filder required to send mail.
 1.action_page.php
 2.process.php
 Thank You
-          Sanat Dey
+         
